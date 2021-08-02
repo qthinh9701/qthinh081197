@@ -1,0 +1,10 @@
+main {
+  .allwork-page__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 100px 0 0;
+    .project__more {
+      margin: 0 auto !important;
+    }
+  }
+}

@@ -1,0 +1,252 @@
+// --- STUDIO DETAIL PAGE CSS ---
+main {
+  .studio-detail-page {
+    .slider {
+      --sliderHeight: 480px;
+      --sliderHeightBottom: 120px;
+      hr {
+        display: none;
+      }
+      @include xs {
+        .container {
+          position: relative;
+          --sliderHeight: 176px;
+          --sliderHeightBottom: 100px;
+          .slider__img {
+          }
+          .slider__bottom {
+            padding: initial;
+            justify-content: initial;
+            margin-bottom: 40px !important;
+            .number-page {
+              margin-right: 30px;
+            }
+            .des-studio {
+              span {
+                font-size: 14px;
+                line-height: 20px;
+                &:first-child {
+                  margin-top: -30px;
+                }
+              }
+            }
+            .download,
+            .zoom,
+            .control {
+              display: none;
+            }
+          }
+          .slider__button-mb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 0 35px;
+            height: var(--sliderHeight);
+            .control-btn {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 20px;
+            }
+          }
+        }
+      }
+      .slider__img {
+        height: var(--sliderHeight);
+        overflow: hidden;
+        .flickity-viewport {
+          height: 100% !important;
+        }
+        &.is-fullscreen {
+          height: 100%;
+        }
+        .slider__img-item {
+          height: 100%;
+          width: 100%;
+          img {
+            min-height: 100%;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .slider__bottom {
+        margin-bottom: 60px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: var(--sliderHeightBottom);
+        .download,
+        .zoom {
+          display: flex;
+          align-items: center;
+          span {
+            font-family: pr;
+            font-size: $fz-text;
+            line-height: 30px;
+            color: $text-black-cl;
+            font-weight: 600;
+            display: block;
+          }
+          i {
+            display: block;
+          }
+        }
+        .download,
+        .zoom {
+          cursor: pointer;
+          span {
+            margin-right: 10px;
+          }
+        }
+      }
+      .slider__button-mb {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .detail {
+      margin-bottom: 76px;
+      @include xs {
+        .container {
+          padding-top: initial !important;
+          .detail__top {
+            display: initial !important;
+            .pricing {
+              padding: 0 10px;
+              margin-bottom: 40px;
+            }
+            .floorplan {
+              padding: 0 10px;
+              .floorplan__text {
+                margin-bottom: 24px !important;
+              }
+            }
+          }
+          .detail__bottom {
+            .specs {
+              .text {
+                display: initial !important;
+              }
+            }
+          }
+        }
+      }
+      .container {
+        padding-top: 30px;
+        .detail__top {
+          padding: 0 20px;
+          margin-bottom: 60px;
+          display: grid;
+          column-gap: 60px;
+          grid-template-columns: 1fr 1fr;
+          .pricing {
+            .pricing__text {
+              .des {
+                font-family: pr;
+                font-size: 14px;
+                line-height: 20px;
+                margin: 30px 0;
+                span {
+                  font-weight: bold;
+                }
+              }
+            }
+            table {
+              border: 1px solid #000;
+              tr {
+                display: flex;
+                justify-content: space-between;
+                &:not(:last-child) {
+                  border-bottom: 1px solid #000;
+                }
+                &:last-child {
+                  td {
+                    &:first-child {
+                      margin-right: 140px;
+                    }
+                  }
+                }
+                td {
+                  font-family: pr;
+                  font-size: 14px;
+                  line-height: 50px;
+                  color: $text-black-cl;
+                  display: inline-block;
+
+                  &:first-child {
+                    margin-left: 60px;
+                  }
+                  &:last-child {
+                    margin-right: 20px;
+                  }
+                }
+              }
+            }
+          }
+          .floorplan {
+            .floorplan__text {
+              margin-bottom: 100px;
+            }
+            .floorplan__img {
+              width: 270px;
+              position: relative;
+
+              .text {
+                position: absolute;
+                color: $text-black-cl;
+                p {
+                  text-transform: uppercase;
+                  font-family: pb;
+                  font-size: $fz-text;
+                  line-height: 20px;
+                }
+                span {
+                  font-family: pr;
+                  font-size: $fz-text;
+                  line-height: 20px;
+                }
+                &:first-child {
+                  width: 76px;
+                  height: 104px;
+                  right: 36px;
+                  top: 36px;
+                }
+                &:nth-child(2) {
+                  bottom: 94px;
+                  left: 40px;
+                  color: $white-cl;
+                }
+              }
+            }
+          }
+        }
+        .detail__bottom {
+          padding: 0 20px;
+          .specs {
+            h3 {
+              margin-bottom: 32px;
+            }
+            .text {
+              display: grid;
+              column-gap: 60px;
+              grid-template-columns: 1fr 1fr;
+              p {
+                font-family: pr;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

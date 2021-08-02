@@ -1,0 +1,43 @@
+main {
+  .about-page {
+    margin-bottom: 60px;
+    .about {
+      background: #282828;
+      .container {
+        padding: 90px 20px 66px;
+        .about__text {
+          margin-bottom: 56px;
+          .title {
+            font-family: pb;
+            font-size: 36px;
+            line-height: 58px;
+            color: $yellow-cl;
+            letter-spacing: 20px;
+            width: min-content;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+          }
+          .des {
+            font-family: plt;
+            font-size: 18px;
+            line-height: 40px;
+            color: $white-cl;
+            width: fit-content;
+          }
+        }
+        .about__booking {
+          justify-content: flex-start;
+          .booking__btn {
+            margin-right: 20px;
+          }
+          .text {
+            .des {
+              text-align: start;
+              color: $white-cl;
+            }
+          }
+        }
+      }
+    }
+  }
+}

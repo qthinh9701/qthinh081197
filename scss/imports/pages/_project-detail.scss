@@ -1,0 +1,73 @@
+// -- PROJECT DETAIL CSS ---
+.backtoall {
+  @include xxs {
+    .container {
+      .right {
+        .fullscreen-btn {
+          display: none;
+        }
+      }
+    }
+  }
+  .container {
+    .right {
+      display: flex;
+      align-items: center;
+      .backtoall-btn {
+        margin-left: 100px;
+      }
+    }
+  }
+}
+main {
+  .project-detail-page {
+    .slider-wrap {
+      @include xs {
+        .container {
+          padding: initial;
+          .slider__text {
+            display: inherit;
+            padding: 0 10px;
+            &.pd-bottom {
+              &::after {
+                bottom: -40px !important;
+              }
+            }
+          }
+        }
+      }
+      .slider__img {
+        position: relative;
+        padding-bottom: 57%;
+        height: 0;
+        margin-bottom: 40px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+        }
+      }
+      .slider__text {
+        display: grid;
+        grid-template-columns: 1fr 60px 1fr;
+        column-gap: 180px;
+        .title {
+          margin-bottom: 18px;
+        }
+        .slider__text-description {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          overflow: hidden;
+        }
+        .slider__text-about {
+          span {
+            font-style: italic;
+            color: $text-black-cl;
+          }
+        }
+      }
+    }
+  }
+}

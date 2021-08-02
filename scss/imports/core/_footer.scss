@@ -1,0 +1,122 @@
+footer {
+  padding-bottom: 140px;
+  background: $yellow-cl;
+  @include xs {
+    background: $white-cl;
+    p {
+      width: fit-content;
+      margin: 0 auto 20px !important;
+    }
+    .footer-form__heading {
+      .container {
+        display: inherit !important;
+        text-align: center;
+      }
+      .footer-form__heading-right {
+        display: none;
+      }
+    }
+    .footer-form__bottom {
+      padding-top: 0 !important;
+      .container {
+        display: initial !important;
+        .footer-form__bottom-left {
+          text-align: center;
+          margin-top: -20px;
+        }
+        .footer-form__bottom-right {
+          form {
+            display: none;
+          }
+        }
+      }
+    }
+    .backtotop {
+      padding-top: 20px;
+      margin-top: 0 !important;
+      background: $yellow-cl;
+      padding-bottom: 140px;
+      p {
+        color: $text-black-cl;
+      }
+    }
+  }
+  p {
+    font-family: psb;
+    font-size: $fz-text;
+    line-height: 30px;
+    color: $text-black-cl;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+
+  .footer-form__heading {
+    background: $white-cl;
+    .container {
+      display: grid;
+      padding: 0 40px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .footer-form__bottom {
+    padding-top: 28px;
+    .container {
+      display: grid;
+      padding: 0 40px;
+      grid-template-columns: 1fr 1fr;
+    }
+    .footer-form__bottom-right {
+      .ft-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        label {
+          font-family: psb;
+          font-size: $fz-text;
+          line-height: 30px;
+          color: $text-black-cl;
+        }
+        input {
+          border: none;
+          background: none;
+          border-bottom: 1px solid $black-cl;
+          outline: none;
+          width: 100%;
+        }
+        textarea {
+          background: none;
+          width: 100%;
+          margin-bottom: 36px;
+        }
+        button {
+          display: block;
+          float: right;
+          background: $black-bg-cl;
+          color: $white-cl;
+          border: none;
+          padding: 5px 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .backtotop {
+    text-align: center;
+    margin-top: 40px;
+    .backtotop__icon {
+      display: block;
+      img {
+        padding: 20px;
+        cursor: pointer;
+      }
+    }
+    .backtotop__text {
+      font-family: pr;
+      font-size: 10px;
+      line-height: 30px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+main {
+  .studiopage-wrapper {
+    .studio {
+      padding-top: 70px;
+      @include xs {
+        .studio__list {
+          grid-template-columns: 1fr !important;
+          .studio__list-item {
+            .img-item {
+              img {
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+            .text-box {
+              .text {
+                .detail {
+                  display: flex;
+                  justify-content: flex-end;
+                  margin-top: -20%;
+                  span {
+                    display: none !important;
+                  }
+                  i {
+                    transform: rotate(-90deg);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .studio__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 70px;
+        .studio__list-item {
+          @include transition($t);
+          &:hover {
+            .img-item {
+              img {
+                filter: saturate(1) sepia(0.14);
+                @include transition($t);
+              }
+            }
+            .text-box {
+              .text {
+                background: $gray-bg-cl;
+                @include transition($t);
+                .des {
+                  span {
+                    color: $white-cl;
+                    @include transition($t);
+                  }
+                }
+                span {
+                  color: $white-cl;
+                  @include transition($t);
+                }
+                .detail {
+                  i {
+                    img {
+                      filter: brightness(1) sepia(0.35);
+                      @include transition($t);
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .img-item {
+            height: 0;
+            padding-bottom: 62.5%;
+            img {
+              filter: brightness(0.41) sepia(0.14);
+            }
+          }
+          .text-box {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            grid-template-rows: 120px;
+
+            .text {
+              display: flex;
+              padding-left: 80px;
+              justify-content: space-between;
+              align-items: center;
+
+              .detail {
+                width: 100px;
+                text-align: center;
+                cursor: pointer;
+                span {
+                  margin-bottom: 20px;
+                  display: block;
+                  font-family: psb;
+                  font-size: 12px;
+                  text-transform: uppercase;
+                }
+                i {
+                  display: block;
+                  img {
+                    filter: brightness(0.17) sepia(0.35);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      hr {
+        margin: 100px 0 60px;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+// ---CSS HEADER ---
+header {
+  width: 100%;
+  background: $gray-cl;
+  height: 72px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    .header__hidden {
+      img {
+        display: none;
+      }
+    }
+  }
+  @include xs {
+    .header {
+      .header__hidden {
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+
+}
