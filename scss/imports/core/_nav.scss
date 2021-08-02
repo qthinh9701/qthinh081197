@@ -2,7 +2,7 @@
 nav {
   @include transition($t);
   @include xs {
-    display: block;
+    display: none;
   }
   &.active {
     position: fixed;
