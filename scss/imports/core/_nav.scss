@@ -4,9 +4,6 @@ nav {
   @include xs {
     display: block;
   }
-  @include xxs {
-    display: block;
-  }
   &.active {
     position: fixed;
     width: 100%;
