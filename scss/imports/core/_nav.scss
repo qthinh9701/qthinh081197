@@ -2,10 +2,10 @@
 nav {
   @include transition($t);
   @include xs {
-    display: none;
+    display: block;
   }
   @include xxs {
-    display: none;
+    display: block;
   }
   &.active {
     position: fixed;
